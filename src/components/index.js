@@ -1,2 +1,5 @@
 export { default as Nav } from './Nav'
 export { default as Home } from './Home'
+export { default as Scheduling } from './Scheduling'
+export { default as ToDo } from './ToDo'
+export { default as Resources } from './Resources'
