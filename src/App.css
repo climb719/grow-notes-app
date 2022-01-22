@@ -70,6 +70,20 @@ color: blue;
   transform: scale(2); 
 }
 
+.icons .content {
+  display: none;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  right: 5%;
+  padding: .5em;
+  font-size: 12px;
+}
+
+.icons li:hover .content {
+  display: block;
+}
+
 
 
 a:-webkit-any-link {
