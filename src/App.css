@@ -52,6 +52,26 @@ color: rgb(24, 145, 192);
 color: blue;
 }
 
+.icons {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+
+}
+
+.icons li {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+
+}
+
+.icons li:hover {
+  transform: scale(2); 
+}
+
+
+
 a:-webkit-any-link {
   text-decoration: none;
   color: white;
