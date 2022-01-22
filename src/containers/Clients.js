@@ -12,7 +12,7 @@ class Clients extends Component {
     render() {
      return ( 
         <div className="clients">
-        <h3 className="page-heading">Client Forms</h3>
+        <h3 className="page-heading">Client Options</h3>
         <ul className= "icons">
         <li><img src="images/001-documents.png" alt="intake forms"/></li>
         <li><img src="images/005-mental-health.png" alt="holding heart and mind"/></li>
