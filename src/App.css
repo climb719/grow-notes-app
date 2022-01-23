@@ -66,16 +66,15 @@ color: blue;
 }
 
 .icons li:hover {
-  transform: scale(2); 
+  transform: scale(1.5); 
 }
 
 .icons .content {
   display: none;
   position: absolute;
-  bottom: 15%;
   left: 5%;
   right: 5%;
-  padding: .5em;
+  padding: .1em;
   font-size: 12px;
 }
 

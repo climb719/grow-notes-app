@@ -5,10 +5,10 @@ const Clients = props => {
 
     const [btnColor, setBtnColor] = useState("whitesmoke");
 
-    const changeStyle = () => {
-        console.log("you just clicked")
+    // const changeStyle = () => {
+    //     console.log("you just clicked")
         
-    }
+    // }
 
     return (
         <div className="clients">
@@ -23,9 +23,12 @@ const Clients = props => {
         <ul className= "icons">
         <li><img src="images/001-documents.png" alt="intake forms"/>
         <p className="content">Intake Forms</p></li>
-        <li><img src="images/005-mental-health.png" alt="holding heart and mind"/></li>
-        <li><img src="images/002-solution.png" alt="mind with puzzle"/></li>
-        <li><img src="images/006-brain.png" alt="heart and brain"/></li>
+        <li><img src="images/005-mental-health.png" alt="holding heart and mind"/>
+        <p className="content">Treatment Plan</p></li>
+        <li><img src="images/002-solution.png" alt="mind with puzzle"/>
+        <p className="content">Progress Note</p></li>
+        <li><img src="images/006-brain.png" alt="heart and brain"/>
+        <p className="content">Client Overview</p></li>
         </ul>
        
         </div>
