@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
+import Search from '../components/Search';
 
 
+const Clients = props => {
 
-
-class Clients extends Component {
-
-  
-    render() {
-     return ( 
+    return (
         <div className="clients">
         <h3 className="page-heading">Client Options</h3>
+        <Search />
         <ul className= "icons">
         <li><img src="images/001-documents.png" alt="intake forms"/>
         <p className="content">Intake Forms</p></li>
@@ -20,7 +17,7 @@ class Clients extends Component {
        
         </div>
      )
-    }
+    
 }
 
 

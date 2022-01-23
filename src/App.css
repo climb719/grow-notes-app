@@ -84,6 +84,25 @@ color: blue;
   display: block;
 }
 
+.filteredClients ul {
+  height: 8px;
+  font-size: 12px;
+  
+}
+
+.filteredClients li {
+  overflow:hidden; 
+  text-align: left;
+
+}
+
+.filteredClients li:hover {
+  display: block;
+  cursor: pointer;
+  transform: scale(1.5); 
+  
+
+}
 
 
 a:-webkit-any-link {
