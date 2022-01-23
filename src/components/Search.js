@@ -40,7 +40,7 @@ const handleClick = (e) => {
 return (
     <div style={{ padding: 20 }}>
         <input className='input'
-            placeholder='Search...'
+            placeholder='Search for a client...'
             onChange={(e) => searchItems(e.target.value)}
             
         />

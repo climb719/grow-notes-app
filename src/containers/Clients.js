@@ -1,12 +1,25 @@
 import Search from '../components/Search';
-
+import React, { useState } from 'react'
 
 const Clients = props => {
 
+    const [btnColor, setBtnColor] = useState("whitesmoke");
+
+    const changeStyle = () => {
+        console.log("you just clicked")
+        
+    }
+
     return (
         <div className="clients">
-        <h3 className="page-heading">Client Options</h3>
-        <Search />
+        <h3 className="page-heading">Client Portal</h3>
+        <p><button
+        onClick={() => {
+          btnColor === "whitesmoke" ? setBtnColor("gray") : setBtnColor("whitesmoke")}}
+        style={{ backgroundColor: btnColor }} >Add new client...
+        </button>
+         <Search /> </p>
+       
         <ul className= "icons">
         <li><img src="images/001-documents.png" alt="intake forms"/>
         <p className="content">Intake Forms</p></li>

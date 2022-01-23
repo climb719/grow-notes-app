@@ -4,8 +4,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding-top: 10%;
   font-size: calc(10px + 2vmin);
   color: black;
 }
@@ -83,6 +82,14 @@ color: blue;
 .icons li:hover .content {
   display: block;
 }
+/* 
+#new-client {
+  background-color: red;
+}
+
+#new-client.clicked {
+  background-color: green;
+} */
 
 .filteredClients ul {
   height: 8px;
