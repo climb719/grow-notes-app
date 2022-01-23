@@ -30,18 +30,26 @@ const searchItems = (searchValue) => {
     }
 }
 
+const handleClick = (e) => {
+    console.log(e.target.innerText)
+    let client = document.getElementsByClassName('input')
+    client.item(0).value = e.target.innerText
+}
+
+
 return (
     <div style={{ padding: 20 }}>
-        <input
+        <input className='input'
             placeholder='Search...'
             onChange={(e) => searchItems(e.target.value)}
+            
         />
             {searchInput.length > 1 ? (
                 filtered.map((client) => {
                     return (
                       <div className='filteredClients'>
-                        <ul onClick={(e) => console.log(e.target)}>
-                            <li>{client.name} - - {client.birthday}</li>
+                        <ul onClick={(e) => handleClick(e)}>
+                            <li>{client.name} - {client.birthday}</li>
                         </ul>
                       </div>
                     )
