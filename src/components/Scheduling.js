@@ -1,8 +1,11 @@
+import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css';
+
 const Scheduling = props => {
     return (
      <div className="scheduling">
    
-     <h1 className="page-heading">Calendar</h1>
+     <p className='calendar'><Calendar /></p>
     
     
      

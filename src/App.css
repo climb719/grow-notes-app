@@ -81,6 +81,16 @@ color: blue;
 .icons li:hover .content {
   display: block;
 }
+
+.calendar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  
+}
 /* 
 #new-client {
   background-color: red;
