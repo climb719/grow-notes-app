@@ -1,6 +1,7 @@
 import './App.css'
-import { Nav, Home, Scheduling, ToDo, Resources, Client }  from './components'
+import { Nav, Home, Scheduling, Resources, Client }  from './components'
 import Clients from './containers/Clients';
+import ToDoContainer from './containers/ToDoContainer';
 import { Routes, Route } from "react-router-dom"
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     <Routes>
     <Route path="/" element={ <Home/> } />
     <Route path="scheduling" element={ <Scheduling/> } />
-    <Route path="toDo" element={ <ToDo/> } />
+    <Route path="todos" element={ <ToDoContainer/> } />
     <Route path="resources" element={ <Resources/> } />
     <Route path="clients" element={ <Clients/> } />
     <Route path="client" element={ <Client/> } />

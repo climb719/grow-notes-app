@@ -1,17 +1,33 @@
-import React, { useState, useEffect } from 'react'
-import { ToDoList } from '.';
+import React, { useState } from 'react'
+import { AiOutlineDelete } from 'react-icons/ai';
+import { FiEdit } from 'react-icons/fi';
 
 
-const ToDO = props => {
-    return (
-     <div className="ToDO">
-     <h3 className="page-heading">On The Docket:</h3>
-     <ToDoList />
+function ToDo({toDoArray}) {
+
+    const [edit, setEdit] = useState({
+        id: null,
+        value: ''
+      });
+
+    return toDoArray.map((todo, index) => (
+        <div className={todo.isComplete ? 'todo-complete' : 'todo'} key={index} >
+          <div key={todo.id} onClick={() => console.log("comlete click")}>
+            {todo.text}
+          </div>
+          <div className='todo-icons'>
+          <AiOutlineDelete
+             onClick={() => console.log(`{todo.id}`)}
+            className='delete-icon'
+          />
+          <FiEdit
+            onClick={() => setEdit({ id: todo.id, value: todo.text })}
+            className='edit-icon'
+          />
+        </div>
+      </div>
+    ))
     
-    
-     
-     </div>
-    )
 }
 
-export default ToDO
+export default ToDo
