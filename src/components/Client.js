@@ -4,11 +4,17 @@ function Client() {
 
     const { state } = useLocation();
 
-    console.log(state.client)
+    const client = state.client
 
     return (
-        <div>
-        <p>Client Info:</p>
+        <div className='clientInfo'>
+        <ul><p>Client Info:</p>
+        <li><b>Name: </b>{client.name}</li>
+        <li><b>Date of Birth: </b>{client.birthday}</li>
+        <li><b>Phone Number: </b>{client.phone}</li>
+        <li><b>Address: </b>{client.address}</li>
+        <li><b>Concern: </b>{client.concern}</li>
+        </ul>
         </div>
     )
 
