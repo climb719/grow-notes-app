@@ -51,6 +51,25 @@ color: rgb(24, 145, 192);
 color: blue;
 }
 
+.filteredClients ul {
+  text-align: center;
+  
+  height: 8px;
+  font-size: 12px;  
+}
+
+.filteredClients li {
+  list-style-type:none;
+  
+}
+
+.filteredClients li:hover {
+  color: #282c34;
+  cursor: pointer;
+  transform: scale(1.2); 
+  
+}
+
 .icons {
   display: inline-block;
   text-decoration: none;
@@ -88,57 +107,21 @@ color: blue;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-
-  
-}
-/* 
-#new-client {
-  background-color: red;
 }
 
-#new-client.clicked {
-  background-color: green;
-} */
 
-.filteredClients ul {
-  height: 8px;
-  font-size: 12px;
-  
-}
 
-.filteredClients li {
-  overflow:hidden; 
-  text-align: left;
-
-}
-
-.filteredClients li:hover {
-  display: block;
-  cursor: pointer;
-  transform: scale(1.5); 
-  
-
-}
 
 
 a:-webkit-any-link {
   text-decoration: none;
-  color: white;
+  color: #282c34;
   cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -146,18 +129,10 @@ a:-webkit-any-link {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
+
+} */
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
