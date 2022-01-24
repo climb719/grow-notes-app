@@ -6,12 +6,15 @@ function ToDoList() {
   const [toDoArray, setToDoArray] = useState([])
 
   const addToDoItem = input => {
-    if (!input.text || /^\s*$/.test(input.text)) {
-        return
-    }
-    const newToDos = [input, ...toDoArray];
-    setToDoArray(newToDos);
-    console.log(...toDoArray);
+      console.log(input)
+   //debugger
+    if (input.text === '') {
+        alert("please add text")
+    } else {
+        const newToDos = [input, ...toDoArray];
+        setToDoArray(newToDos);
+        console.log(...toDoArray)   
+    } 
   }  
 
   return (

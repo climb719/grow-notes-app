@@ -16,9 +16,9 @@ function ToDoForm(props) {
         id: uuidv1(),
         text: toDo
       })
+     setToDo('')
 
-      e.target.reset()
-
+     
     }
 
   return (
@@ -26,10 +26,13 @@ function ToDoForm(props) {
     <input 
     type='text'
     placeholder='Add a todo item here...'
+    value={toDo}
+    onChange={handleChange}
     name='text'
     className='todo-text'
-    onChange={handleChange}/>
-    <button className='todo-button'>Add Todo</button>
+    />&nbsp;
+
+    <button className='todo-button' onClick={handleSubmit}>Add Todo</button>
     </form>
   )
  
