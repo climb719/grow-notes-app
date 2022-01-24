@@ -10,6 +10,7 @@ const Nav = props => {
       <li><Link to="/toDo"><div className='link'>To Do</div></Link></li>
       <li><Link to="/resources"><div className='link'>Resources</div></Link></li>
       <li><Link to="/clients"><div className='link'>Clients</div></Link></li>
+      
      </ul>
 
       </div>
