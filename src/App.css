@@ -114,14 +114,10 @@ color: blue;
 }
 
 .clientInfo li {
-  
-
   padding: .5em;
   font-size: 14px;  
   list-style-type:none;
 }
-
-
 
 
 a:-webkit-any-link {
