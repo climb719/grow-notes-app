@@ -5,11 +5,19 @@ function ToDoList() {
 
   const [toDos, setToDos] = useState([])
 
+  const addToDoItem = input => {
+    if (!input.text || /^\s*$/.test(input.text)) {
+        return
+    }
+    const newToDos = [input, ...toDos];
+    setToDos(newToDos);
+    console.log(...toDos);
+  }  
 
   return (
       <div>
   
-      <ToDoForm />
+      <ToDoForm onSubmit={addToDoItem} />
       </div>
   )
 }

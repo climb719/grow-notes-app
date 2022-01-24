@@ -12,10 +12,10 @@ function ToDoForm(props) {
     const handleSubmit = (e) => {
       e.preventDefault()
 
-      // props.onSubmit({
-      //   id: uuidv1(),
-      //   text: toDo
-      // })
+      props.onSubmit({
+        id: uuidv1(),
+        text: toDo
+      })
 
       e.target.reset()
 
