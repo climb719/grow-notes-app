@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { ToDoForm } from '.';
+import { ToDoList } from '.';
 
 
 const ToDO = props => {
     return (
      <div className="ToDO">
-     <h1 className="page-heading">To Do List</h1>
-     <ToDoForm />
+     <h3 className="page-heading">On The Docket:</h3>
+     <ToDoList />
     
     
      
