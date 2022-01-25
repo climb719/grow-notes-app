@@ -1,9 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { v1 as uuidv1 } from 'uuid';
 
 function ToDoForm(props) {
 
     const [toDo, setToDo] = useState('')
+    const importFocus = useRef(null)
+
+    useEffect(() => {
+      importFocus.current.focus()
+    })
 
     const handleChange = (e) => {
       setToDo(e.target.value)
@@ -17,8 +22,6 @@ function ToDoForm(props) {
         text: toDo
       })
      setToDo('')
-
-     
     }
 
   return (
@@ -28,6 +31,7 @@ function ToDoForm(props) {
     placeholder='Add a todo item here...'
     value={toDo}
     onChange={handleChange}
+    ref={importFocus}
     name='text'
     className='todo-text'
     />&nbsp;

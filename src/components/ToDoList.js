@@ -17,11 +17,26 @@ function ToDoList() {
     } 
   }  
 
+  const deleteToDo = id => {
+      const arrayAfterDelete = [...toDoArray].filter(todo => todo.id !== id)
+      setToDoArray(arrayAfterDelete)
+  }
+
+  const editToDo = (id, newToDo) => {
+      console.log(newToDo)
+      console.log(id)
+    // if (newToDo.text || /^\s*$/.test(newToDo.text)) {
+    //     return
+    //   }
+    //     setToDoArray(prev => prev.map(todo => (todo.id ===id ? newToDo: todo)))
+  }
+
+
   return (
       <div>
   
       <ToDoForm onSubmit={addToDoItem} />
-      <ToDo toDoArray={toDoArray}/>
+      <ToDo toDoArray={toDoArray} deleteToDo={deleteToDo} editToDo={editToDo}/>
   
       </div>
   )
