@@ -126,6 +126,90 @@ a:-webkit-any-link {
   cursor: pointer;
 }
 
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 520px;
+    min-height: 600px;
+    text-align: center;
+    margin: 16px auto;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px auto;
+  color: black;
+  background: linear-gradient(
+    90deg,
+    rgb(129, 184, 190) 0%,
+    rgb(42, 125, 131) 100%
+    );
+    padding: 12px;
+    border-radius: 5px;
+    width: 80%;
+  }
+
+  .todo-form {
+    margin-bottom: 32px;
+  }
+  
+  .todo-input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid #180cff;
+    outline: none;
+    width: 320px;
+    background: transparent;
+
+  }
+
+  .todo-button {
+    padding: 16px;
+    margin-left: 4px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgb(105, 85, 238) 0%,
+      rgb(22, 79, 202) 100%
+    );
+    color: black;
+
+  }
+
+  .hidden-form {
+    display: none;
+  }
+
+  .todo:nth-child(4n + 1) {
+    background: linear-gradient(
+      90deg,
+      rgb(160, 181, 160),
+      rgb(121, 163, 113) 
+    );
+  }
+
+  .todo:nth-child(4n + 2) {
+    background: linear-gradient(
+      90deg,
+      rgb(137, 153, 184),
+      rgb(75, 86, 150)
+    );
+  }
+
+  .todo:nth-child(4n + 3) {
+    background: linear-gradient(
+      90deg,
+      rgb(111, 167, 189),
+      rgb(15, 112, 156)
+    );
+  }
+
 
 
 /* .App-header {

@@ -22,13 +22,14 @@ function ToDoList() {
       setToDoArray(arrayAfterDelete)
   }
 
-  const editToDo = (id, newToDo) => {
+  const editToDo = (todoId, newToDo) => {
       console.log(newToDo)
-      console.log(id)
-    // if (newToDo.text || /^\s*$/.test(newToDo.text)) {
-    //     return
-    //   }
-    //     setToDoArray(prev => prev.map(todo => (todo.id ===id ? newToDo: todo)))
+      console.log(todoId)
+    if (!newToDo.text || /^\s*$/.test(newToDo.text)) {
+      return
+    }
+
+    setToDoArray(prev => prev.map(toDo=> (toDo.id === todoId ? newToDo : toDo)));
   }
 
 

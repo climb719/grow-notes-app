@@ -3,7 +3,8 @@ import { v1 as uuidv1 } from 'uuid';
 
 function ToDoForm(props) {
 
-    const [toDo, setToDo] = useState('')
+    const [toDo, setToDo] = useState(props.edit ? props.edit.value : '')
+    // const [editMode, setEditMode] = useState(false)
     const importFocus = useRef(null)
 
     useEffect(() => {
@@ -24,20 +25,36 @@ function ToDoForm(props) {
      setToDo('')
     }
 
-  return (
-    <form className='todo-form' onSubmit={handleSubmit}>
-    <input 
-    type='text'
-    placeholder='Add a todo item here...'
-    value={toDo}
-    onChange={handleChange}
-    ref={importFocus}
-    name='text'
-    className='todo-text'
-    />&nbsp;
 
-    <button className='todo-button' onClick={handleSubmit}>Add Todo</button>
-    </form>
+  return (
+   <>
+    {props.edit ? ( 
+      <form className='todo-form' onSubmit={handleSubmit}>
+      <input 
+      type='text'
+      placeholder='Add a todo item here...'
+      value={toDo}
+      onChange={handleChange}
+      ref={importFocus}
+      name='text'
+      className='todo-input'/>
+      <button className='todo-button' onClick={handleSubmit}>UPDATE TODO</button>
+      </form> 
+     ) : (
+       <form className={props.edit ? 'hidden-form' : 'todo-form'} onSubmit={handleSubmit}>  
+       <input 
+      type='text'
+      placeholder='Add a todo item here...'
+      value={toDo}
+      onChange={handleChange}
+      ref={importFocus}
+      name='text'
+      className='todo-input' 
+      />
+      <button className='todo-button'  onClick={handleSubmit}>ADD TODO</button>
+      </form>
+      )}
+     </>
   )
  
 }
